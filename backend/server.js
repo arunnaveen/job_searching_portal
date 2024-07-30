@@ -9,9 +9,7 @@ app.use(cors());
 //connect mongoDb
 connectDB();
 
-app.get('/',(req,res)=>{
-    res.send("Server is started")
-})
+app.use('/api/user',require('./routes/userRoute'));
 
 const port = process.env.PORT;
 
